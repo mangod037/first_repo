@@ -1,0 +1,156 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 네비게이션바 div */
+.navbar {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgb(225, 221, 221);
+}
+.logo {
+    width: 150px;
+    height: 45px;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: rgb(199, 199, 199);
+    border: 2px solid rgb(199, 199, 199);
+    border-radius: 10px;
+    width: 180px;
+    height: 30px;
+}
+.icons {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.icons i {
+    font-size: 25px;
+}
+
+/* 중간 프로필박스 div */
+.profile-box {
+    height: 250px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.pro-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 0 100px;
+}
+.profile-contents {
+    padding-right: 100px;
+    position: relative;
+    width: 350px;
+}
+.profile1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile1 i {
+    font-size: 30px;
+}
+.profile2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 스토리픽쳐 div */
+.story-pic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 900px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.photo-box {
+    display: flex;
+    flex-direction: row;
+}
+.cr {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.cr-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 50px;
+}
+.cn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.cn-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 50px;
+}
+.blank-box {
+    width:450px;
+}
+
+/* 하단 픽쳐박스 div */
+.picture-box {
+    width: 900px;
+    border-top: 1px solid rgb(29, 5, 5);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+.pic-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pic-nav button {
+    margin: 20px 20px;
+    border: 0;
+    text-align: center;
+    font-size: 14px;
+}
+.pictures {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-template-columns: 300px 300px 300px;
+    grid-gap: 5px;
+}
+.pictures img {
+    width: 290px;
+    height: 180px;
+    padding-bottom: 10px;
+}
