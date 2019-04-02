@@ -1,11 +1,16 @@
-def add(a, b):
-    return a+b
+class FourCal:
+    def __init__(self, num1, num2):
+        self.num1 = num1
+        self.num2 = num2
 
-def sub(a, b):
-    return a-b
+    def add(self):
+        return self.num1 + self.num2
 
-def mul(a, b):
-    return a*b
+    def sub(self):
+        return self.num1 - self.num2
 
-def div(a, b):
-    return a/b
+    def mul(self):
+        return self.num1 * self.num2
+
+    def div(self):
+        return self.num1 / self.num2
