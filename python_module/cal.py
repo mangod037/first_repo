@@ -24,7 +24,8 @@ while True:
     elif a==3:
         print(b.mul())
     elif a==4:
-        if num2==0:
-            print("0으로는 나눌 수 없습니다")
-        else:
+        try:
             print(b.div())
+        except:
+            print("0으로는 나눌 수 없습니다")
+        
