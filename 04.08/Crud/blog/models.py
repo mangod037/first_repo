@@ -36,16 +36,16 @@ class Post(models.Model):
 #     four = '4'
 #     five = '5'
 #     score_choices = (
-#         (one, '★')
-#         (two, '★★')
-#         (three, '★★★')
-#         (four, '★★★★')
-#         (five, '★★★★★')
+#         (one, '★'),
+#         (two, '★★'),
+#         (three, '★★★'),
+#         (four, '★★★★'),
+#         (five, '★★★★★'),
 #     )
 #     starScore = models.CharField(
-#         max_length=2
-#         choices = score_choices
-#         default = one
+#         max_length=2,
+#         choices = score_choices,
+#         default = one,
 #         )
 
 #     def is_upperclass(self):

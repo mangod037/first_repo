@@ -10,10 +10,11 @@
 <body>
     {% block content %}
     <div class="content-box">
-        <h1> 새로운 글 쓰기 </h1><br>
+        <h1>수정하기</h1>
         <form method="POST">{% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">제출 !</button>
+            <button type="submit">수정 !</button>
+        </form>
     </div>
     {% endblock %}
 </body>
