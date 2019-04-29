@@ -3,7 +3,6 @@
     text-align: center;
     background-color: blanchedalmond;
 }
-
 .box {
     height: 600px;
     display: flex;
@@ -14,7 +13,6 @@
 .content-box {
     height: 300px;
     width: 400px;
-    align-items: center;
     padding-left: 50px;
 }
 
