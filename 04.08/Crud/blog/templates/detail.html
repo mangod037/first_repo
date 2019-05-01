@@ -9,16 +9,31 @@
 {% extends "home.html" %}
 <body>
     {% block content %}
-    <div class="content-box">
+    <div class="box">
+        <div class="content-box">
+        
+            <h2 style="color:red;">제목: {{ post.title }}</h2>
+            <h3>리뷰: {{ post.review }}</h3>
+            <h3>가격: {{ post.price }} 만원</h3>
+            <h3>별점: {{ post.starScore }}</h3>
+            
+            <h3>댓글: </h3>
+            <ul>
+                {% for comment in post.comments.all %}
+                    <li>{{ comment.content }}<a href="{% url 'comment_delete' post.pk comment.pk %}"> 삭제하기</a></li>
+                {% endfor %}
+            </ul>
+            <form method="POST">{% csrf_token %}
+                {{ form.as_p }}
+                <input type='submit' />
+            </form>
+
+            <a href="{% url 'home' %}">리뷰 목록으로 돌아가기</a><br>
+            <a href="{% url 'edit' post.pk %}">수정하기</a><br>
+            <a href="{% url 'delete' post.pk %}">삭제하기</a>
+        </div>
     
-        <h2>제목: {{ post.title }}</h2>
-        <h5>리뷰: {{ post.review }}</h5>
-        <h5>가격: {{ post.price }}</h5>
-        <h5>별점: {{ post.starScore }}</h5>
-        <a href="{% url 'home' %}">리뷰 목록으로 돌아가기</a><br>
-        <a href="{% url 'edit' post.pk %}">수정하기</a><br>
-        <a href="{% url 'delete' post.pk %}">삭제하기</a>
-    </div>
     {% endblock %}
+    </div>
 </body>
 </html>

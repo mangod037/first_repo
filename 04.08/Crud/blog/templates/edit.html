@@ -9,13 +9,15 @@
 {% extends "home.html" %}
 <body>
     {% block content %}
-    <div class="content-box">
-        <h1>수정하기</h1>
-        <form method="POST">{% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">수정 !</button>
-        </form>
-    </div>
+    <div class="box">
+        <div class="content-box">
+            <h1>수정하기</h1>
+            <form method="POST">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">수정 !</button>
+            </form>
+        </div>
     {% endblock %}
+    </div>
 </body>
 </html>
