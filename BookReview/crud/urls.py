@@ -1,4 +1,4 @@
-"""Crud URL Configuration
+"""crud URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -20,9 +20,9 @@ from blog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('detail/<int:post_pk>', views.detail, name='detail'),
+    path('delete/<int:post_pk>', views.delete, name='delete'),
     path('new/', views.new, name='new'),
-    path('detail/<int:post_pk>/', views.detail, name='detail'),
-    path('edit/<int:post_pk>/', views.edit, name='edit'),
-    path('delete/<int:post_pk>/', views.delete, name='delete'),
-    path('detail/<int:post_pk>/<int:comment_pk>/', views.comment_delete, name='comment_delete'),
+    path('edit/<int:post_pk>', views.edit, name='edit'),
+    path('detail/<int:post_pk>/<int:comment_pk>', views.commnet_delete, name='comment_delete'),
 ]

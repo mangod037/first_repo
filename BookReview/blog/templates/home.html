@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block contnet %}
+<div>
+    {% for post in posts %}
+        <h4><a href="{% url 'detail' post.pk %}">{{ post.title }}</a></h4>
+    {% endfor %}
+    <br>
+    <a href="{% url 'new' %}">글쓰기</a>
+</div>
+{% endblock %}
