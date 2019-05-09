@@ -1,0 +1,54 @@
+.heading {
+    color: red;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home-block {
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-template-columns: 300px 300px 300px;
+}
+.home-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.home-images img {
+    width: 200px;
+    height: 170px;
+}
+
+.button-size {
+    width: fit-content;
+    font-size: 17px;
+    border-radius: 5%;
+    background-color: rgb(211, 207, 207);
+}
+
+.comment-box textarea {
+    width: 200px;
+    height: 30px;
+}
+
+.detail-img img {
+    width: 300px;
+    height: 200px;
+}
+
+.detail-buttons {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

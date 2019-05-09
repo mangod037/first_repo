@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 
-{% block contnet %}
-<div>
+{% block content %}
+<div class="home-block">
     {% for post in posts %}
-        <h4><a href="{% url 'detail' post.pk %}">{{ post.title }}</a></h4>
+        <div class="home-images">
+            <a href="{% url 'detail' post.pk %}"><img src="{{ post.image.url }}"></a>
+            <h4><a href="{% url 'detail' post.pk %}">{{ post.title }}</a></h4>
+        </div>
     {% endfor %}
     <br>
-    <a href="{% url 'new' %}">글쓰기</a>
 </div>
+<a href="{% url 'new' %}"><button class="button-size">글쓰기</button></a>
+
 {% endblock %}

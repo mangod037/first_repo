@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
-{% block contnet %}
-<div>
-    <form method='POST'>{% csrf_token %}
+{% block content %}
+<div class="box">
+    <form method="POST">{% csrf_token %}
         {{ form.as_p }}
-        <button type='submit'>수정 !</button>
+        <button type="submit" class="button-size">수정 !</button>
     </form>
 </div>
 {% endblock %}
