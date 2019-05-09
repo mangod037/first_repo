@@ -1,15 +1,29 @@
+/* base.html */
 .heading {
     color: red;
     display: flex;
     justify-content: center;
     background-color: yellow;
 }
-
 .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.button-size {
+    width: fit-content;
+    font-size: 17px;
+    border-radius: 5%;
+    background-color: rgb(211, 207, 207);
+}
+
+
+/* home.html */
+.home-button {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
 }
 .home-block {
     display: grid;
@@ -29,13 +43,8 @@
     height: 170px;
 }
 
-.button-size {
-    width: fit-content;
-    font-size: 17px;
-    border-radius: 5%;
-    background-color: rgb(211, 207, 207);
-}
 
+/* detail.html */
 .comment-box textarea {
     width: 200px;
     height: 30px;

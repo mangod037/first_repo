@@ -6,9 +6,8 @@
     <div class="detail-img">
         <img src="{{ post.image.url }}" />
     </div>
-    <h4>리뷰: {{ post.review }}</h4>
-    <h4>가격: {{ pos.price }} 만원</h4>
-    <h4>별점: {{ post.starScore }}</h4>
+    <h4>리뷰: </h4><p>{{ post.review }}</p>
+    <h4>가격: {{ post.price }} 만원 / 별점: {{ post.starScore }}</h4>
     <h4>댓글: </h4>
     <ol>
         {% for comment in post.comments.all %}
