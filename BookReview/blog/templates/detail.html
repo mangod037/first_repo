@@ -9,22 +9,30 @@
     <h4>리뷰: </h4><p>{{ post.review }}</p>
     <h4>가격: {{ post.price }} 만원 / 별점: {{ post.starScore }}</h4>
     <h4>댓글: </h4>
-    <ol>
+    <ul>
         {% for comment in post.comments.all %}
-            <li>{{ comment.content }}<a href="{% url 'comment_delete' post.pk comment.pk %}"> 삭제하기</a></li>
+            <li>{{ comment.author }} : {{ comment.content }}
+                {% if user.is_authenticated and comment.author == user.username %}
+                <a href="{% url 'comment_delete' post.pk comment.pk %}"> ✘</a>
+                {% endif %}
+            </li>
         {% endfor %}
-    </ol>
+    </ul>
+    {% if user.is_authenticated %}
     <form method='POST'>{% csrf_token %}
         <div class="comment-box">
             {{ form.as_p }}
             <button type='submit'>등록하기</button>
         </div>
     </form>
+    {% endif %}
     <br>
     <div class="detail-buttons">
         <a href="{% url 'home' %}"><button class="button-size">글 목록으로 돌아가기</button></a>
+        {% if user.is_authenticated and post.author == user.username %}
         <a href="{% url 'delete' post.pk %}"><button class="button-size">삭제하기</button></a>
         <a href="{% url 'edit' post.pk %}"><button class="button-size">수정하기</button></a>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

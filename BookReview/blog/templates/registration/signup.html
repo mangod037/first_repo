@@ -1,0 +1,8 @@
+<h2>회원가입</h2>
+{% if error %}
+{{ error }}
+{% endif %}
+<form method="POST">{% csrf_token %}
+    {{ form.as_p }}
+    <button type='submit'>확인</button>
+</form>
