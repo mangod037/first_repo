@@ -1,0 +1,6 @@
+<h1>결과</h1>
+<ul>
+{% for dict in title_list %}
+    <li><a href="{{ dict.url }}">{{ dict.title }}</a></li><br>
+{% endfor %}
+</ul>

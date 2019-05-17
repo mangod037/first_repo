@@ -11,7 +11,7 @@
     <h4>댓글: </h4>
     <ul>
         {% for comment in post.comments.all %}
-            <li>{{ comment.author }} : {{ comment.content }}
+            <li><strong>{{ comment.author }} :</strong> {{ comment.content }}
                 {% if user.is_authenticated and comment.author == user.username %}
                 <a href="{% url 'comment_delete' post.pk comment.pk %}"> ✘</a>
                 {% endif %}
