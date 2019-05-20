@@ -22,5 +22,5 @@ def home(request):
     else:
         return render(request, 'home.html')
 
-def result(request):
-    return render(request, 'result.html')
+# def result(request):
+#     return render(request, 'result.html')
