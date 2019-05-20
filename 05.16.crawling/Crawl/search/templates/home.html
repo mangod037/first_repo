@@ -1,5 +1,11 @@
+{% comment %} <h1>검색어 입력</h1>
+<form method='GET' action='{% url "result" %}'>{% csrf_token %}
+    <input type='text' name='search_word'>
+    <button type='submit'>확인</button>
+</form> {% endcomment %}
+
 <h1>검색어 입력</h1>
-<form method='POST'>{% csrf_token %}
+<form method='GET' action='{% url "result" %}'>{% csrf_token %}
     <input type='text' name='search_word'>
     <button type='submit'>확인</button>
 </form>
