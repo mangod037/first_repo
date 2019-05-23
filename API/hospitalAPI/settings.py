@@ -129,4 +129,3 @@ STATICFILES_DIRS = (
 # API key
 GOOGLE_MAPS_API_KEY = secrets['GOOGLE_MAPS']['API_KEY']
 HOSPITAL_API_KEY = secrets['HOSPITAL']['API_KEY']
-# sys.path.append(os.path.abspath("/hospitalAPI/config"))
