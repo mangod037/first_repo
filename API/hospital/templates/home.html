@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class='home-checkbox'>
+    <form method='GET' action="{% url 'chosen' %}">
+        <div class='region-check'>
+            <input type='checkbox' name='region' value='110019'>강남구<br>
+            <input type='checkbox' name='region' value='110002'>강동구<br>
+            <input type='checkbox' name='region' value='110024'>강북구<br>
+            <input type='checkbox' name='region' value='110003'>강서구<br>
+        </div>
+        <div class='zip-check'>
+            <input type='checkbox' name='zipCode' value='2010'>종합병원<br>
+            <input type='checkbox' name='zipCode' value='2030'>일반병원<br>
+            <input type='checkbox' name='zipCode' value='2040'>요양병원<br>
+            <input type='checkbox' name='zipCode' value='2050'>치과<br>
+            <input type='checkbox' name='zipCode' value='2060'>한방<br>
+            <input type='checkbox' name='zipCode' value='2070'>의원<br>
+            <input type='checkbox' name='zipCode' value='2080'>보건기관<br>
+            <input type='checkbox' name='zipCode' value='2090'>조산원<br>
+        </div>
+        <button type='submit'>찾기</button>
+    </form>
+</div>
+{% endblock %}
