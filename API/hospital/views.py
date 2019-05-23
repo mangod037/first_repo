@@ -28,6 +28,4 @@ def chosen(request):
             'telno':i['telno']
         })
 
-    x1 = 127.086
-    y1 = 37.584
-    return render(request, 'chosen.html', {'infos':infos,'map_api_key':map_api_key, 'x1':x1, 'y1':y1})
+    return render(request, 'chosen.html', {'infos':infos,'map_api_key':map_api_key})
