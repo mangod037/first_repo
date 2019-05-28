@@ -37,19 +37,25 @@
       let center = document.querySelector(".center");
       let inside = document.querySelector(".inside");
       let link = document.querySelector("a");
-
+      
       outside.addEventListener("click", function() {
         console.log("가장 바깥 쪽!");
+        event.stopPropagation()
       });
       center.addEventListener("click", function() {
         console.log("가운데!");
+        event.stopPropagation()
       });
       inside.addEventListener("click", function() {
         console.log("가장 안 쪽!");
+        event.stopPropagation()
       });
       link.addEventListener("click", function() {
         console.log("구글로 가기!");
+        event.preventDefault()
+        event.stopPropagation()
       });
+
     </script>
   </body>
 </html>
