@@ -61,5 +61,16 @@
 
   <script>
     // 각각의 div를 클릭하면, 클릭한 div와 바로 상위 div의 색깔이 각각, 파랑 / 빨강으로 바뀌게 해주세요
+    let divs = document.querySelectorAll('div')
+    divs.forEach(function(div) {
+      div.addEventListener('click', function(){
+          divs.forEach(function(div) {
+          div.style.backgroundColor = 'white'
+        })
+        this.style.backgroundColor = 'blue'
+        this.parentElement.style.backgroundColor = 'red'
+        event.stopPropagation()
+      })
+    })
   </script>
 </html>
