@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>과제1</title>
+</head>
+<body>
+    <h1>여기가 바뀝니다</h1>
+    <h2 class='result'>________________</h2>
+    <input type='text' class='input'/>
+</body>
+<script>
+    let result = document.querySelector('.result')
+    let input = document.querySelector('.input')
+
+    function enterKey(event) {
+        if(event.keyCode===13) {
+            result.textContent = input.value
+            input.value = ''
+        }
+    }
+
+    input.addEventListener('keypress', enterKey)
+</script>
+</html>
