@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+        src="http://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <title>멍멍</title>
+</head>
+<body>
+    <h1>멍멍이</h1>
+    <button style="font-size: 20px;width: fit-content;border-radius: 5px;">굳</button>
+    <div class='pic'><img src=''></div>
+</body>
+<script>
+    let btn = document.querySelector('button')
+    $('button').click(function() {
+        $.ajax({
+            url: 'https://dog.ceo/api/breeds/image/random',
+            dataType: 'json',
+            success: function(data) {
+                let href = ''
+                $.each(data, function(status, message){
+                    href = message
+                })
+                let img = document.querySelector('img')
+                img.setAttribute('src', href)
+            }
+        })
+    })
+</script>
+</html>
