@@ -12,22 +12,14 @@
         let body = document.querySelector('body')
         let h1 = document.querySelector('h1')
 
-        function getRandomNumber() {
-            let random = Math.floor(Math.random()*255);
-            return random
+        function getRandomColor() {
+            randomColor = "rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")"
+            return randomColor
         }
         
         setInterval(function() {
-            let r1 = getRandomNumber()
-            let g1 = getRandomNumber()
-            let b1 = getRandomNumber()
-            let r2 = getRandomNumber()
-            let g2 = getRandomNumber()
-            let b2 = getRandomNumber()
-            let color1 = "rgb("+r1+","+g1+","+b1+")";
-            let color2 = "rgb("+r2+","+g2+","+b2+")";
-            body.style.backgroundColor = color1;
-            h1.style.color = color2;
+            body.style.backgroundColor = getRandomColor();
+            h1.style.color = getRandomColor();
         }, 100)
     </script>
 </body>
