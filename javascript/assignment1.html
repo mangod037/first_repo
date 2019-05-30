@@ -16,7 +16,7 @@
     let input = document.querySelector('.input')
 
     function enterKey(event) {
-        if(event.keyCode===13) {
+        if(event.keyCode===13 && input.value) {
             result.textContent = input.value
             input.value = ''
         }
