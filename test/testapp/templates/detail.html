@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {{ service.company }} / {{ service.price }} / {{ service.pk }}<br>
+    <a href='{% url "addToMy" service.slug %}'>추가하기</a>
+</body>
+</html>
